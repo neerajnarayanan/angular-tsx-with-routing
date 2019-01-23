@@ -10,10 +10,19 @@ import { ProfileService } from '../common/services/profile.service';
 export class CreateStudent {
   profile: Profile;
   myList: any[] = [];
+  data;
   constructor(private profileService: ProfileService) {
     console.log("create constructor calling");
   }
+  getHeroes(): void {
+    this.data = this.profileService.posttodb().subscribe(
+      data => {
+        console.log(data);
+      });
+  }
+
   ngOnInit(): void {
+    this.getHeroes();
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
     this.profile = {
