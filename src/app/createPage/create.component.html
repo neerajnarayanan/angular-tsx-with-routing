@@ -1,0 +1,58 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3>Profile score info</h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-sm-6 form-group">
+                <label>Name </label>
+                <input type="text" class="form-control" [(ngModel)]="profile.name" />
+            </div>
+            <div class="col-sm-6 form-group">
+                <label>Current company name </label>
+                <input type="text" class="form-control" [(ngModel)]="profile.company" />
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-sm-6 form-group">
+                <label>HTML </label>
+                <input type="number" class="form-control" [(ngModel)]="profile.htmlScore" (change)="autoUpdateScore()" />
+            </div>
+            <div class="col-sm-6 form-group">
+                <label>CSS</label>
+                <input type="number" class="form-control" [(ngModel)]="profile.cssScore" (change)="autoUpdateScore()" />
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-sm-6 form-group">
+                <label>Javascript</label>
+                <input type="number" class="form-control" [(ngModel)]="profile.javascriptScore" (change)="autoUpdateScore()" />
+            </div>
+            <div class="col-sm-6 form-group">
+                <label>Angular</label>
+                <input type="number" class="form-control" [(ngModel)]="profile.angularScore" (change)="autoUpdateScore()" />
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-sm-6 form-group">
+                <label>Total score</label>
+                <input type="number" class="form-control" [(ngModel)]="profile.totalScore" disabled />
+            </div>
+            <div class="col-sm-6 form-group">
+                <label>Average</label>
+                <input type="number" class="form-control" [(ngModel)]="profile.avgScore" disabled />
+            </div>
+
+        </div>
+
+    </div>
+    <div class="panel-footer">
+        <button class="btn btn-primary" (click)="saveFile()">Save</button>
+        <button class="btn btn-info" (click)="getFile()">GET</button>
+    </div>
+
+
+</div>

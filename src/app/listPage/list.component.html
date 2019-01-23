@@ -1,0 +1,25 @@
+<div class="row">
+    <table class="table">
+        <tr class="active">
+            <th>Name</th>
+            <th>Company</th>
+            <th>HTML</th>
+            <th>CSS</th>
+            <th>Javascript</th>
+            <th>Angular</th>
+        </tr>
+        <tr>
+            <td>Kalees</td>
+            <td>Innovation</td>
+            <td>7</td>
+            <td>5</td>
+            <td>8</td>
+            <td>9.5</td>
+        </tr>
+        <tr *ngFor="let item of profileList">
+            <td>{{item.name}}</td>
+
+        </tr>
+    </table>
+
+</div>
